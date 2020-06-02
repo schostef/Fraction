@@ -167,7 +167,7 @@
 	}
 	bool Fraction::operator!=(const Fraction & f)
 	{
-		return !(numerator == f.numerator && denominator == f.denominator);
+		return (numerator != f.numerator || denominator != f.denominator);
 	}
 
 	bool Fraction::operator<(const Fraction & f)
