@@ -40,6 +40,11 @@
 		long long i_gcd =gcd(getNumerator(),getDenominator());
 		numerator /= i_gcd;
 		denominator /= i_gcd;
+		if ((numerator < 0 && denominator < 0) || (denominator < 0 && numerator > 0))
+		{
+			numerator *= -1;
+			denominator *= -1;
+		}		
 	}
 
 	long long Fraction::gcd(long long a, long long b)
