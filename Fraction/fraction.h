@@ -33,11 +33,14 @@ public:
 	bool operator<=(const Fraction &f);
 	bool operator>(const Fraction &f);
 	bool operator>=(const Fraction &f);
-		
+			
 	long long getNumerator();
 	long long getDenominator();
 	void setNumerator(long long n);
 	void setDenominator(long long n);
+	int to_int();
+	double to_double();
+	std::string to_string();
 	
 	static long long gcd(long long a, long long b);	
 	static long long lcm(long long a, long long b);

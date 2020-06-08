@@ -193,4 +193,23 @@
 	bool Fraction::operator>=(const Fraction & f)
 	{
 		return (double)numerator / denominator >= (double)f.numerator / f.denominator;
-	}	
+	}
+
+	int Fraction::to_int()
+	{
+		double integralPart;
+		modf((double)numerator / denominator, &integralPart);
+		return (int)integralPart;
+	}
+
+	double Fraction::to_double()
+	{
+		return (double)numerator / denominator;		
+	}
+
+	std::string Fraction::to_string()
+	{		
+		return std::string() + std::to_string(numerator) + "/" + std::to_string(denominator);
+	}
+
+	
