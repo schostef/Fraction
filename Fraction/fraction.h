@@ -1,6 +1,10 @@
 #ifndef FRACTION_H
 #define FRACTION_H
 
+#include <cmath>
+#include <stdexcept>
+#include <string>
+
 class Fraction
 {
 private:
@@ -9,6 +13,7 @@ private:
 	void simplify();
 public:
 	Fraction(long long num, long long denom);
+	Fraction(double d);
 	Fraction();
 
 	Fraction operator+(const Fraction &f);
@@ -33,6 +38,7 @@ public:
 	bool operator<=(const Fraction &f);
 	bool operator>(const Fraction &f);
 	bool operator>=(const Fraction &f);
+	Fraction abs();
 			
 	long long getNumerator();
 	long long getDenominator();
